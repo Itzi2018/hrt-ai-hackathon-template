@@ -1,0 +1,231 @@
+appointment_id,patient_id,date,type,status,dentist,duration_min,notes
+A0001,P001,2024-11-14,Filling,Completed,Dr. Thompson,45,Good oral hygiene
+A0002,P001,2024-07-24,Whitening,Completed,Dr. Thompson,90,
+A0003,P002,2025-12-27,Periodontal Scaling,Completed,Dr. Thompson,60,Patient reports sensitivity
+A0004,P002,2024-08-24,Periodontal Scaling,Completed,Dr. Kim,60,Good oral hygiene
+A0005,P002,2026-03-20,Extraction,Completed,Dr. Rodriguez,60,Follow-up required
+A0006,P002,2024-12-01,Root Canal,Completed,Dr. Kim,90,
+A0007,P002,2026-01-02,Filling,Completed,Dr. Thompson,90,Follow-up required
+A0008,P003,2025-02-15,Extraction,Completed,Dr. Thompson,90,
+A0009,P003,2024-06-25,Crown Prep,Completed,Dr. Thompson,30,Follow-up required
+A0010,P003,2025-08-06,Crown Prep,Completed,Dr. Kim,90,Patient reports sensitivity
+A0011,P003,2025-09-01,Checkup & Cleaning,Completed,Dr. Thompson,60,
+A0012,P003,2024-07-12,Root Canal,Cancelled,Dr. Thompson,45,
+A0013,P003,2024-12-08,Crown Prep,Completed,Dr. Patel,30,
+A0014,P004,2026-01-20,Root Canal,Cancelled,Dr. Patel,60,Good oral hygiene
+A0015,P004,2025-07-07,Whitening,Completed,Dr. Rodriguez,90,Follow-up required
+A0016,P004,2025-04-02,Filling,Completed,Dr. Thompson,30,
+A0017,P004,2024-12-02,Whitening,Completed,Dr. Kim,30,
+A0018,P004,2026-04-27,Extraction,Completed,Dr. Kim,30,
+A0019,P005,2025-10-06,Filling,Completed,Dr. Kim,90,
+A0020,P005,2025-09-18,Root Canal,Completed,Dr. Patel,45,Follow-up required
+A0021,P005,2026-02-17,Orthodontic Consult,Completed,Dr. Thompson,90,
+A0022,P006,2026-03-22,Extraction,Completed,Dr. Patel,60,
+A0023,P006,2024-10-01,Checkup & Cleaning,Cancelled,Dr. Rodriguez,90,
+A0024,P006,2025-05-24,Whitening,Completed,Dr. Patel,90,Good oral hygiene
+A0025,P007,2025-03-21,Periodontal Scaling,No-Show,Dr. Kim,90,Patient reports sensitivity
+A0026,P007,2024-05-17,Orthodontic Consult,Completed,Dr. Thompson,90,Good oral hygiene
+A0027,P008,2024-05-20,Whitening,Completed,Dr. Kim,30,Follow-up required
+A0028,P008,2025-03-03,Periodontal Scaling,Completed,Dr. Thompson,60,Routine visit
+A0029,P008,2025-01-17,Root Canal,Cancelled,Dr. Thompson,45,Follow-up required
+A0030,P008,2025-09-16,Orthodontic Consult,Completed,Dr. Patel,45,Routine visit
+A0031,P008,2025-10-03,Periodontal Scaling,Completed,Dr. Kim,90,
+A0032,P008,2024-06-09,Checkup & Cleaning,Completed,Dr. Patel,60,Patient reports sensitivity
+A0033,P008,2025-04-19,Orthodontic Consult,Completed,Dr. Rodriguez,90,
+A0034,P008,2024-12-11,Whitening,Completed,Dr. Rodriguez,90,Follow-up required
+A0035,P009,2025-09-23,Extraction,Completed,Dr. Rodriguez,30,
+A0036,P009,2024-12-06,Root Canal,No-Show,Dr. Kim,45,
+A0037,P009,2025-01-28,Orthodontic Consult,Completed,Dr. Patel,45,Follow-up required
+A0038,P009,2025-10-18,Orthodontic Consult,Completed,Dr. Patel,45,Follow-up required
+A0039,P010,2026-04-13,Root Canal,Completed,Dr. Thompson,30,Routine visit
+A0040,P010,2024-10-28,Periodontal Scaling,Completed,Dr. Thompson,60,Patient reports sensitivity
+A0041,P011,2025-09-22,Periodontal Scaling,No-Show,Dr. Patel,30,Good oral hygiene
+A0042,P011,2025-01-20,Checkup & Cleaning,Completed,Dr. Kim,45,
+A0043,P012,2026-03-12,Filling,No-Show,Dr. Thompson,45,
+A0044,P012,2025-05-14,Periodontal Scaling,Completed,Dr. Rodriguez,90,Follow-up required
+A0045,P012,2024-11-02,Filling,Completed,Dr. Kim,45,Follow-up required
+A0046,P012,2024-07-31,Extraction,Completed,Dr. Kim,30,Patient reports sensitivity
+A0047,P013,2025-04-15,Periodontal Scaling,Completed,Dr. Rodriguez,30,Patient reports sensitivity
+A0048,P013,2025-08-16,Periodontal Scaling,Completed,Dr. Patel,45,Follow-up required
+A0049,P014,2024-09-05,Extraction,Completed,Dr. Thompson,30,
+A0050,P014,2025-10-20,Orthodontic Consult,Completed,Dr. Kim,30,Routine visit
+A0051,P014,2025-12-20,Orthodontic Consult,Cancelled,Dr. Thompson,30,Good oral hygiene
+A0052,P014,2024-07-02,Crown Prep,Completed,Dr. Rodriguez,90,Good oral hygiene
+A0053,P014,2026-03-17,Crown Prep,Completed,Dr. Rodriguez,60,Routine visit
+A0054,P014,2026-03-06,Checkup & Cleaning,Completed,Dr. Rodriguez,30,Patient reports sensitivity
+A0055,P014,2025-02-11,Periodontal Scaling,Completed,Dr. Rodriguez,45,
+A0056,P014,2025-03-18,Periodontal Scaling,Completed,Dr. Patel,90,Follow-up required
+A0057,P015,2025-07-01,Filling,Completed,Dr. Kim,60,Good oral hygiene
+A0058,P015,2024-06-27,Crown Prep,Completed,Dr. Patel,90,Routine visit
+A0059,P015,2025-07-20,Filling,Completed,Dr. Thompson,30,
+A0060,P015,2024-11-29,Checkup & Cleaning,Completed,Dr. Kim,60,
+A0061,P015,2025-01-13,Checkup & Cleaning,Completed,Dr. Kim,60,
+A0062,P016,2025-08-17,Periodontal Scaling,Completed,Dr. Patel,30,
+A0063,P016,2024-09-22,Root Canal,Cancelled,Dr. Rodriguez,30,
+A0064,P016,2025-04-16,Filling,Completed,Dr. Thompson,30,
+A0065,P017,2026-01-01,Orthodontic Consult,Completed,Dr. Rodriguez,90,Good oral hygiene
+A0066,P017,2025-02-09,Root Canal,Completed,Dr. Thompson,45,
+A0067,P017,2025-01-03,Root Canal,Completed,Dr. Patel,60,Good oral hygiene
+A0068,P017,2025-06-24,Orthodontic Consult,No-Show,Dr. Patel,60,
+A0069,P017,2025-08-06,Periodontal Scaling,Cancelled,Dr. Kim,90,
+A0070,P017,2025-01-28,Crown Prep,Completed,Dr. Thompson,60,Patient reports sensitivity
+A0071,P017,2024-06-23,Crown Prep,Completed,Dr. Kim,90,Routine visit
+A0072,P017,2025-07-17,Crown Prep,Completed,Dr. Thompson,45,Good oral hygiene
+A0073,P018,2026-01-29,Whitening,Completed,Dr. Patel,90,Routine visit
+A0074,P018,2024-12-16,Checkup & Cleaning,Cancelled,Dr. Kim,90,
+A0075,P019,2026-03-23,Orthodontic Consult,Completed,Dr. Rodriguez,90,
+A0076,P019,2026-03-17,Crown Prep,Cancelled,Dr. Rodriguez,90,
+A0077,P019,2026-05-02,Extraction,Completed,Dr. Rodriguez,45,
+A0078,P020,2025-03-20,Filling,No-Show,Dr. Thompson,45,
+A0079,P020,2025-08-05,Checkup & Cleaning,Cancelled,Dr. Rodriguez,30,Follow-up required
+A0080,P021,2025-05-20,Extraction,Completed,Dr. Thompson,45,Patient reports sensitivity
+A0081,P021,2025-12-10,Crown Prep,Completed,Dr. Kim,90,
+A0082,P021,2026-01-12,Orthodontic Consult,Completed,Dr. Thompson,60,
+A0083,P021,2026-05-29,Periodontal Scaling,Scheduled,Dr. Rodriguez,45,Routine visit
+A0084,P022,2025-06-19,Orthodontic Consult,No-Show,Dr. Thompson,60,Good oral hygiene
+A0085,P022,2025-08-02,Crown Prep,Completed,Dr. Thompson,30,Patient reports sensitivity
+A0086,P022,2025-05-13,Orthodontic Consult,Completed,Dr. Rodriguez,30,
+A0087,P022,2025-04-28,Checkup & Cleaning,Completed,Dr. Thompson,60,Patient reports sensitivity
+A0088,P022,2024-09-24,Extraction,Cancelled,Dr. Kim,60,
+A0089,P023,2024-05-30,Root Canal,Completed,Dr. Patel,30,Follow-up required
+A0090,P023,2025-03-13,Whitening,Completed,Dr. Kim,30,Follow-up required
+A0091,P023,2025-07-08,Root Canal,Completed,Dr. Kim,45,
+A0092,P023,2025-05-29,Orthodontic Consult,Completed,Dr. Kim,60,Good oral hygiene
+A0093,P023,2025-08-09,Whitening,Completed,Dr. Patel,90,Routine visit
+A0094,P023,2026-01-14,Extraction,Completed,Dr. Thompson,60,Routine visit
+A0095,P023,2025-04-29,Filling,Completed,Dr. Thompson,60,
+A0096,P023,2024-07-19,Crown Prep,Completed,Dr. Rodriguez,30,
+A0097,P024,2025-02-10,Whitening,Completed,Dr. Kim,30,
+A0098,P024,2025-02-17,Orthodontic Consult,Cancelled,Dr. Thompson,30,Patient reports sensitivity
+A0099,P024,2026-04-22,Orthodontic Consult,No-Show,Dr. Thompson,30,Routine visit
+A0100,P025,2024-12-04,Periodontal Scaling,Completed,Dr. Rodriguez,90,
+A0101,P025,2024-05-08,Crown Prep,Completed,Dr. Patel,90,
+A0102,P025,2025-04-16,Orthodontic Consult,No-Show,Dr. Patel,60,Patient reports sensitivity
+A0103,P026,2025-03-09,Whitening,No-Show,Dr. Patel,60,
+A0104,P026,2024-08-16,Crown Prep,Completed,Dr. Rodriguez,45,Routine visit
+A0105,P026,2025-02-27,Extraction,Completed,Dr. Patel,30,Follow-up required
+A0106,P026,2025-10-01,Extraction,No-Show,Dr. Patel,45,
+A0107,P026,2025-10-29,Extraction,Cancelled,Dr. Rodriguez,45,
+A0108,P027,2025-08-28,Root Canal,Cancelled,Dr. Kim,60,Patient reports sensitivity
+A0109,P027,2026-02-15,Checkup & Cleaning,Completed,Dr. Kim,30,Follow-up required
+A0110,P028,2025-10-07,Checkup & Cleaning,Completed,Dr. Kim,60,Routine visit
+A0111,P028,2026-01-29,Filling,Completed,Dr. Patel,90,Good oral hygiene
+A0112,P028,2025-06-02,Filling,Completed,Dr. Thompson,45,
+A0113,P028,2026-04-24,Orthodontic Consult,Completed,Dr. Thompson,30,Routine visit
+A0114,P028,2025-02-02,Crown Prep,Cancelled,Dr. Patel,90,
+A0115,P028,2025-03-10,Filling,Completed,Dr. Rodriguez,45,Routine visit
+A0116,P028,2026-01-29,Whitening,Completed,Dr. Thompson,60,Good oral hygiene
+A0117,P028,2025-01-06,Filling,Completed,Dr. Patel,45,Good oral hygiene
+A0118,P029,2025-10-17,Periodontal Scaling,Completed,Dr. Thompson,90,
+A0119,P029,2026-03-02,Whitening,Completed,Dr. Rodriguez,60,Patient reports sensitivity
+A0120,P029,2024-07-04,Filling,Cancelled,Dr. Patel,30,Routine visit
+A0121,P029,2025-03-22,Whitening,Completed,Dr. Kim,30,
+A0122,P029,2024-11-09,Filling,Completed,Dr. Thompson,60,
+A0123,P030,2025-03-31,Checkup & Cleaning,Cancelled,Dr. Rodriguez,60,Follow-up required
+A0124,P030,2026-02-21,Extraction,Completed,Dr. Kim,90,Patient reports sensitivity
+A0125,P030,2026-02-17,Whitening,Completed,Dr. Patel,60,
+A0126,P030,2025-10-19,Checkup & Cleaning,Cancelled,Dr. Rodriguez,30,Patient reports sensitivity
+A0127,P030,2025-09-01,Orthodontic Consult,Completed,Dr. Rodriguez,60,Routine visit
+A0128,P030,2025-12-04,Crown Prep,Cancelled,Dr. Patel,45,
+A0129,P030,2024-08-28,Filling,No-Show,Dr. Kim,90,Good oral hygiene
+A0130,P030,2025-02-28,Whitening,Completed,Dr. Rodriguez,60,
+A0131,P031,2026-03-13,Root Canal,Cancelled,Dr. Kim,30,
+A0132,P031,2026-03-16,Crown Prep,Completed,Dr. Thompson,90,Good oral hygiene
+A0133,P031,2025-09-01,Filling,Completed,Dr. Rodriguez,90,Routine visit
+A0134,P031,2025-08-21,Periodontal Scaling,Completed,Dr. Rodriguez,30,Patient reports sensitivity
+A0135,P031,2025-04-29,Checkup & Cleaning,No-Show,Dr. Patel,45,Follow-up required
+A0136,P031,2025-11-03,Orthodontic Consult,Completed,Dr. Rodriguez,60,Routine visit
+A0137,P032,2025-01-14,Root Canal,Completed,Dr. Kim,90,
+A0138,P032,2024-06-17,Whitening,Completed,Dr. Patel,90,
+A0139,P033,2025-03-18,Filling,Completed,Dr. Rodriguez,90,
+A0140,P033,2025-04-19,Crown Prep,Completed,Dr. Rodriguez,30,Good oral hygiene
+A0141,P034,2025-07-10,Periodontal Scaling,Completed,Dr. Rodriguez,30,Good oral hygiene
+A0142,P034,2026-02-19,Crown Prep,Completed,Dr. Patel,90,Follow-up required
+A0143,P035,2025-06-25,Root Canal,Completed,Dr. Patel,30,
+A0144,P035,2025-01-01,Whitening,Completed,Dr. Rodriguez,45,Patient reports sensitivity
+A0145,P035,2026-02-22,Extraction,Completed,Dr. Kim,45,
+A0146,P035,2026-03-22,Periodontal Scaling,Completed,Dr. Thompson,90,
+A0147,P035,2024-11-06,Whitening,Completed,Dr. Rodriguez,45,Good oral hygiene
+A0148,P035,2026-03-30,Orthodontic Consult,Completed,Dr. Rodriguez,30,Follow-up required
+A0149,P035,2025-01-04,Periodontal Scaling,Completed,Dr. Thompson,30,Routine visit
+A0150,P036,2025-08-18,Filling,Completed,Dr. Thompson,90,
+A0151,P036,2024-11-17,Checkup & Cleaning,No-Show,Dr. Thompson,45,Follow-up required
+A0152,P036,2024-09-26,Root Canal,Completed,Dr. Patel,90,Routine visit
+A0153,P036,2025-06-21,Filling,No-Show,Dr. Kim,30,Patient reports sensitivity
+A0154,P037,2025-03-16,Root Canal,No-Show,Dr. Rodriguez,60,Follow-up required
+A0155,P037,2025-05-07,Whitening,Completed,Dr. Patel,60,Routine visit
+A0156,P037,2025-07-05,Crown Prep,Completed,Dr. Rodriguez,60,
+A0157,P037,2024-08-04,Root Canal,No-Show,Dr. Rodriguez,30,
+A0158,P037,2024-07-28,Whitening,Completed,Dr. Rodriguez,90,Patient reports sensitivity
+A0159,P037,2024-10-06,Filling,Completed,Dr. Rodriguez,90,
+A0160,P037,2025-07-06,Filling,Cancelled,Dr. Thompson,60,Routine visit
+A0161,P038,2025-07-26,Extraction,Completed,Dr. Rodriguez,90,Patient reports sensitivity
+A0162,P038,2025-10-19,Root Canal,No-Show,Dr. Patel,60,Routine visit
+A0163,P038,2025-01-04,Checkup & Cleaning,Completed,Dr. Rodriguez,45,
+A0164,P038,2025-05-18,Root Canal,Completed,Dr. Kim,90,Routine visit
+A0165,P039,2025-05-30,Extraction,Completed,Dr. Thompson,60,
+A0166,P039,2025-03-05,Extraction,Completed,Dr. Rodriguez,90,Patient reports sensitivity
+A0167,P039,2025-05-27,Periodontal Scaling,Completed,Dr. Thompson,60,Good oral hygiene
+A0168,P039,2025-01-09,Root Canal,Completed,Dr. Kim,45,Follow-up required
+A0169,P039,2026-04-15,Whitening,Completed,Dr. Patel,30,Follow-up required
+A0170,P040,2025-12-25,Root Canal,Completed,Dr. Thompson,30,Patient reports sensitivity
+A0171,P040,2025-03-03,Checkup & Cleaning,Cancelled,Dr. Thompson,30,Good oral hygiene
+A0172,P041,2025-05-21,Filling,Completed,Dr. Rodriguez,45,Routine visit
+A0173,P041,2025-07-16,Whitening,No-Show,Dr. Kim,45,Routine visit
+A0174,P041,2025-08-18,Periodontal Scaling,Cancelled,Dr. Kim,90,Good oral hygiene
+A0175,P041,2024-09-15,Filling,Completed,Dr. Patel,60,Patient reports sensitivity
+A0176,P041,2026-01-05,Crown Prep,Completed,Dr. Patel,60,Patient reports sensitivity
+A0177,P041,2025-08-03,Extraction,Completed,Dr. Thompson,90,Routine visit
+A0178,P042,2025-01-12,Checkup & Cleaning,Completed,Dr. Kim,45,Follow-up required
+A0179,P042,2025-03-25,Whitening,Completed,Dr. Kim,90,Patient reports sensitivity
+A0180,P043,2024-07-23,Whitening,Completed,Dr. Patel,30,Good oral hygiene
+A0181,P043,2025-02-11,Crown Prep,Completed,Dr. Rodriguez,60,
+A0182,P043,2026-05-22,Whitening,Scheduled,Dr. Patel,60,Patient reports sensitivity
+A0183,P043,2024-05-18,Filling,Completed,Dr. Rodriguez,45,Routine visit
+A0184,P043,2025-06-12,Root Canal,Completed,Dr. Thompson,90,
+A0185,P043,2025-12-03,Filling,Cancelled,Dr. Thompson,30,Follow-up required
+A0186,P043,2025-11-13,Extraction,Completed,Dr. Patel,60,Follow-up required
+A0187,P044,2025-04-26,Periodontal Scaling,No-Show,Dr. Rodriguez,30,
+A0188,P044,2025-11-24,Checkup & Cleaning,Completed,Dr. Rodriguez,60,Routine visit
+A0189,P044,2025-05-27,Crown Prep,Completed,Dr. Thompson,90,Follow-up required
+A0190,P044,2025-11-28,Periodontal Scaling,Completed,Dr. Rodriguez,60,Routine visit
+A0191,P044,2024-05-24,Crown Prep,Completed,Dr. Kim,60,Follow-up required
+A0192,P044,2026-02-22,Orthodontic Consult,Completed,Dr. Rodriguez,90,
+A0193,P045,2025-03-28,Periodontal Scaling,Completed,Dr. Rodriguez,90,Routine visit
+A0194,P045,2024-05-24,Whitening,Cancelled,Dr. Thompson,60,
+A0195,P045,2026-04-10,Crown Prep,Completed,Dr. Rodriguez,45,Routine visit
+A0196,P045,2026-01-12,Periodontal Scaling,Cancelled,Dr. Patel,45,Routine visit
+A0197,P045,2025-10-09,Whitening,Completed,Dr. Rodriguez,90,
+A0198,P045,2026-05-05,Periodontal Scaling,Completed,Dr. Rodriguez,60,Good oral hygiene
+A0199,P045,2026-03-21,Whitening,Completed,Dr. Thompson,60,
+A0200,P046,2025-09-25,Checkup & Cleaning,No-Show,Dr. Kim,90,
+A0201,P046,2025-05-07,Filling,Cancelled,Dr. Rodriguez,60,
+A0202,P046,2025-03-08,Orthodontic Consult,Completed,Dr. Thompson,45,Routine visit
+A0203,P046,2026-01-20,Periodontal Scaling,Cancelled,Dr. Kim,90,Routine visit
+A0204,P047,2024-07-09,Whitening,No-Show,Dr. Rodriguez,30,
+A0205,P047,2024-11-29,Orthodontic Consult,Completed,Dr. Kim,45,Follow-up required
+A0206,P047,2025-01-03,Extraction,Completed,Dr. Kim,45,Good oral hygiene
+A0207,P047,2026-05-12,Whitening,Scheduled,Dr. Rodriguez,90,
+A0208,P047,2026-01-26,Filling,Completed,Dr. Patel,60,Good oral hygiene
+A0209,P047,2024-06-03,Crown Prep,Completed,Dr. Thompson,30,Patient reports sensitivity
+A0210,P047,2025-07-18,Periodontal Scaling,Completed,Dr. Thompson,60,Patient reports sensitivity
+A0211,P047,2024-11-20,Root Canal,Completed,Dr. Kim,90,
+A0212,P048,2026-04-12,Root Canal,Cancelled,Dr. Rodriguez,45,Patient reports sensitivity
+A0213,P048,2025-07-12,Extraction,No-Show,Dr. Rodriguez,60,Routine visit
+A0214,P048,2025-09-24,Orthodontic Consult,Completed,Dr. Kim,60,
+A0215,P048,2024-12-08,Root Canal,Completed,Dr. Kim,45,
+A0216,P048,2024-09-06,Whitening,Completed,Dr. Patel,30,Routine visit
+A0217,P048,2026-04-22,Orthodontic Consult,No-Show,Dr. Kim,90,
+A0218,P048,2024-08-22,Orthodontic Consult,Completed,Dr. Rodriguez,90,Patient reports sensitivity
+A0219,P048,2024-07-06,Periodontal Scaling,Completed,Dr. Patel,30,Patient reports sensitivity
+A0220,P049,2025-04-08,Extraction,Completed,Dr. Rodriguez,45,Follow-up required
+A0221,P049,2024-06-02,Whitening,Completed,Dr. Thompson,45,Follow-up required
+A0222,P049,2024-12-27,Whitening,Completed,Dr. Kim,90,Routine visit
+A0223,P049,2025-09-07,Root Canal,Completed,Dr. Patel,30,Follow-up required
+A0224,P049,2025-05-10,Crown Prep,Cancelled,Dr. Kim,45,Follow-up required
+A0225,P050,2024-05-30,Root Canal,Completed,Dr. Thompson,90,Good oral hygiene
+A0226,P050,2025-07-27,Filling,Completed,Dr. Thompson,90,Patient reports sensitivity
+A0227,P050,2025-10-30,Checkup & Cleaning,Completed,Dr. Patel,60,Good oral hygiene
+A0228,P050,2024-10-04,Periodontal Scaling,Cancelled,Dr. Rodriguez,30,Routine visit
+A0229,P050,2025-03-23,Orthodontic Consult,Completed,Dr. Rodriguez,90,Follow-up required
+A0230,P050,2026-04-22,Extraction,Completed,Dr. Rodriguez,60,Routine visit

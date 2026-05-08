@@ -1,0 +1,21 @@
+lead_id,first_name,last_name,phone,email,source,segment,status,date_added,notes
+L001,Linh,Nguyen,(802) 813-3929,linh.nguyen30@email.com,Community Event,Hispanic/Latino Families,New Lead,2026-04-26,Saw us at community event
+L002,David,Kim,(975) 291-9016,david.kim26@email.com,Community Event,Seniors 65+,Contacted,2026-02-18,Moving to FV soon
+L003,Maria,Flores,(898) 898-4483,maria.flores20@email.com,Yelp,Families with Young Children,Contacted,2026-04-15,Referred by existing patient
+L004,James,Anderson,(970) 893-2438,james.anderson61@email.com,Nextdoor,Young Adults 25-34,Contacted,2026-05-02,Saw us at community event
+L005,Mei,Chen,(917) 408-6939,mei.chen69@email.com,Walk-In,Vietnamese Families,New Lead,2026-03-02,Moving to FV soon
+L006,Rosa,Martinez,(936) 252-6857,rosa.martinez17@email.com,Korean Church,Korean Community,New Lead,2026-04-17,
+L007,Kevin,Park,(790) 715-3883,kevin.park5@email.com,Korean Church,Korean Community,New Lead,2026-04-16,
+L008,Jennifer,Tran,(917) 847-2409,jennifer.tran19@email.com,Community Event,Vietnamese Families,Contacted,2026-05-07,
+L009,Michael,Lopez,(967) 615-4289,michael.lopez8@email.com,Yelp,Korean Community,Appointment Set,2026-03-12,Saw us at community event
+L010,Susan,Lee,(764) 562-8801,susan.lee8@email.com,Walk-In,Hispanic/Latino Families,New Lead,2026-02-20,Needs cleaning
+L011,Carlos,Ramirez,(909) 327-2580,carlos.ramirez16@email.com,Korean Church,Korean Community,New Lead,2026-04-15,Needs cleaning
+L012,Emily,Pham,(806) 774-6228,emily.pham99@email.com,Community Event,Korean Community,Contacted,2026-04-08,Saw us at community event
+L013,Robert,Johnson,(885) 390-2186,robert.johnson65@email.com,Nextdoor,Families with Young Children,Contacted,2026-02-22,Interested in whitening
+L014,Anh,Le,(893) 608-6517,anh.le52@email.com,Yelp,Korean Community,Contacted,2026-03-21,
+L015,Jessica,Wong,(719) 581-7530,jessica.wong99@email.com,Nextdoor,Korean Community,Contacted,2026-03-29,Moving to FV soon
+L016,Thomas,Garcia,(860) 423-5091,thomas.garcia50@email.com,Patient Referral,Vietnamese Families,Contacted,2026-04-27,
+L017,Yuna,Choi,(735) 715-5801,yuna.choi88@email.com,Community Event,Caucasian Families,Converted,2026-03-07,
+L018,Patricia,Hernandez,(920) 497-7706,patricia.hernandez85@email.com,Facebook Ad,Caucasian Families,Converted,2026-04-17,Saw us at community event
+L019,Daniel,Nguyen,(925) 399-7223,daniel.nguyen44@email.com,Community Event,Young Adults 25-34,Converted,2026-03-24,Interested in whitening
+L020,Sarah,Smith,(851) 397-3812,sarah.smith82@email.com,Yelp,Young Adults 25-34,Contacted,2026-03-15,Moving to FV soon

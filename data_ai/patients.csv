@@ -1,0 +1,51 @@
+patient_id,name,age,gender,phone,email,insurance,risk_level,last_visit,next_appointment,days_since_last_visit
+P001,Jennifer Davis,36,Male,(954) 304-9935,patient1@email.com,Delta Dental,Low,2024-06-23,2026-05-01,684
+P002,Linda Miller,37,Male,(774) 403-9928,patient2@email.com,Aetna Dental,Low,2024-08-12,2026-06-22,634
+P003,Steven Garcia,28,Female,(548) 484-3547,patient3@email.com,MetLife Dental,Medium,2025-08-26,2026-07-07,255
+P004,Robert Anderson,52,Female,(244) 947-8527,patient4@email.com,BlueCross Dental,Low,2025-04-29,2026-05-01,374
+P005,David Robinson,54,Male,(921) 271-1750,patient5@email.com,Self-Pay,Low,2025-12-02,2026-06-22,157
+P006,Andrew Davis,20,Female,(484) 664-6977,patient6@email.com,MetLife Dental,High,2025-08-18,2026-05-29,263
+P007,Jennifer Johnson,29,Male,(367) 673-7216,patient7@email.com,Cigna Dental,Low,2025-03-25,2026-06-07,409
+P008,Susan Smith,37,Male,(523) 610-5386,patient8@email.com,Delta Dental,Low,2024-06-22,2026-08-06,685
+P009,Charles Thomas,66,Male,(471) 342-5040,patient9@email.com,Self-Pay,Low,2025-09-04,2026-06-07,246
+P010,Nancy Jackson,59,Female,(424) 341-9348,patient10@email.com,Aetna Dental,Low,2024-09-11,2026-08-06,604
+P011,Patricia Jones,62,Male,(594) 590-8668,patient11@email.com,BlueCross Dental,High,2026-01-05,2026-04-23,123
+P012,Maria Williams,76,Female,(987) 856-6573,patient12@email.com,Delta Dental,High,2025-07-25,2026-08-06,287
+P013,Maria Wilson,72,Male,(719) 308-5889,patient13@email.com,Self-Pay,Low,2025-06-12,2026-06-22,330
+P014,Dorothy Jones,77,Male,(813) 531-9005,patient14@email.com,Delta Dental,Low,2024-11-05,2026-05-22,549
+P015,Sandra Moore,38,Male,(446) 780-2290,patient15@email.com,Delta Dental,High,2025-12-15,2026-06-07,144
+P016,Joseph Brown,24,Female,(762) 369-5342,patient16@email.com,BlueCross Dental,High,2024-11-27,2026-05-01,527
+P017,Kenneth Thompson,33,Female,(608) 887-7118,patient17@email.com,Aetna Dental,High,2024-07-26,2026-06-22,651
+P018,William Johnson,51,Male,(802) 767-4770,patient18@email.com,BlueCross Dental,Low,2024-10-26,2026-07-07,559
+P019,Lisa Smith,37,Male,(232) 538-2160,patient19@email.com,BlueCross Dental,Low,2025-08-26,2026-04-23,255
+P020,Barbara Thompson,24,Female,(448) 684-7669,patient20@email.com,MetLife Dental,Medium,2025-08-08,2026-05-29,273
+P021,Richard Jackson,60,Female,(946) 255-2612,patient21@email.com,Delta Dental,Medium,2026-01-02,2026-05-01,126
+P022,Robert Davis,32,Male,(749) 659-3296,patient22@email.com,Aetna Dental,Medium,2025-02-20,2026-06-07,442
+P023,Andrew Johnson,64,Male,(251) 867-9856,patient23@email.com,Delta Dental,Low,2025-10-03,2026-05-29,217
+P024,Charles Harris,35,Female,(260) 368-7209,patient24@email.com,Delta Dental,Low,2026-01-03,2026-05-22,125
+P025,Steven White,44,Female,(913) 948-8973,patient25@email.com,MetLife Dental,High,2025-03-05,2026-05-29,429
+P026,James Martinez,77,Male,(965) 521-1936,patient26@email.com,Delta Dental,Low,2025-09-26,2026-05-29,224
+P027,Andrew Martin,28,Male,(720) 282-4044,patient27@email.com,Delta Dental,Medium,2024-08-18,2026-07-07,628
+P028,William Thomas,23,Male,(792) 808-1651,patient28@email.com,BlueCross Dental,Medium,2024-08-07,2026-05-01,639
+P029,Nancy Martin,48,Female,(409) 885-6147,patient29@email.com,MetLife Dental,Medium,2026-01-15,2026-06-22,113
+P030,Lisa Moore,66,Female,(969) 274-1152,patient30@email.com,Aetna Dental,Low,2025-07-11,2026-06-22,301
+P031,Barbara Martin,41,Male,(557) 270-5002,patient31@email.com,Cigna Dental,Low,2024-07-11,2026-05-01,666
+P032,Joseph Moore,75,Male,(883) 767-5905,patient32@email.com,Self-Pay,Low,2025-06-21,2026-05-15,321
+P033,Ashley Williams,78,Male,(478) 488-4450,patient33@email.com,Self-Pay,Low,2025-12-23,2026-05-15,136
+P034,Andrew Wilson,72,Female,(457) 252-2512,patient34@email.com,Self-Pay,Medium,2025-04-22,2026-05-22,381
+P035,Susan Brown,41,Male,(959) 652-8007,patient35@email.com,BlueCross Dental,Low,2025-01-30,2026-05-29,463
+P036,Ashley Brown,77,Male,(578) 796-3426,patient36@email.com,Aetna Dental,Low,2026-03-30,2026-05-01,39
+P037,Ashley Smith,53,Male,(898) 455-2684,patient37@email.com,Cigna Dental,Low,2025-11-29,2026-04-23,160
+P038,Paul Brown,38,Male,(381) 622-1406,patient38@email.com,MetLife Dental,High,2024-09-12,2026-06-22,603
+P039,Andrew Davis,42,Male,(918) 310-7267,patient39@email.com,Delta Dental,Medium,2025-05-03,2026-06-22,370
+P040,Kenneth White,52,Female,(433) 428-1387,patient40@email.com,Self-Pay,Low,2024-12-13,2026-05-22,511
+P041,Andrew Johnson,43,Female,(856) 721-7548,patient41@email.com,Self-Pay,Low,2025-09-23,2026-06-22,227
+P042,Robert Wilson,30,Female,(239) 311-8119,patient42@email.com,Cigna Dental,High,2024-10-06,2026-06-07,579
+P043,Karen Williams,57,Male,(460) 245-8144,patient43@email.com,Delta Dental,Medium,2025-05-22,2026-06-22,351
+P044,Paul Miller,54,Female,(271) 880-6409,patient44@email.com,BlueCross Dental,Medium,2024-10-23,2026-08-06,562
+P045,David Martin,47,Female,(534) 612-5844,patient45@email.com,BlueCross Dental,Medium,2025-05-22,2026-05-01,351
+P046,Jessica Jones,46,Female,(761) 200-5978,patient46@email.com,Cigna Dental,Low,2025-11-29,2026-05-22,160
+P047,Daniel Taylor,67,Female,(652) 891-4501,patient47@email.com,BlueCross Dental,Medium,2025-09-05,2026-06-22,245
+P048,David Martin,50,Male,(969) 440-6085,patient48@email.com,MetLife Dental,Medium,2024-12-10,2026-05-15,514
+P049,William Harris,17,Female,(624) 844-4185,patient49@email.com,Self-Pay,Low,2025-09-17,2026-05-15,233
+P050,Patricia Garcia,21,Female,(424) 380-9486,patient50@email.com,Aetna Dental,Low,2025-03-11,2026-07-07,423
