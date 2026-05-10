@@ -1,54 +1,3 @@
-# 🎉 HRT AI Hackathon Template
-
-A GitHub Codespace template for the Hospitality, Recreation, and Tourism (HRT) Applied Research Hackathon. Build a working Streamlit prototype with Claude — no coding experience required.
-
-## Getting Started
-
-1. Click **Code** → **Create Codespace on main**
-2. Wait for the environment to set up (1~5 min). The terminal will tell you when everything is ready.
-3. Click the **Claude** (orange star) icon at the top right corner
-4. Sign in with your **Claude Team** account
-5. Tell Claude what you want to build! For example:
-   > "Build a dashboard that shows hotel occupancy by city."
-
-## Claude Commands
-
-Type these in the Claude Code chat at any time:
-
-| Command | What it does |
-|---------|-------------|
-| `/run` | Start your app and give you a clickable link to view it |
-| `/checkpoint` | Save your current progress |
-| `/back-to-checkpoint` | Restore to your last saved checkpoint |
-| `/restart` | Reset everything back to the very beginning |
-| `/write-readme` | Generate a README based on your current app |
-| `/push` | Publish your project to your own GitHub for your portfolio |
-| `/handoff` | Write a session summary to pick up later |
-| `/resume` | Load the previous session summary |
-
-## What's Inside
-
-| File / Folder | Purpose |
-|---------------|---------|
-| `app.py` | Your Streamlit app — Claude writes all code here |
-| `CLAUDE.md` | Instructions that guide Claude's behavior |
-| `requirements.txt` | Python dependencies (Streamlit, Pandas) |
-| `data/` | Place your own datasets here (CSV, etc.) |
-| `data_ai/` | Claude saves any generated or crawled data here |
-
-## Uploading Your Own Data
-
-1. In the left sidebar, right-click the `data/` folder
-2. Select **Upload...**
-3. Choose your file
-
-CSV files will automatically open as a table when you click them.
-
----
-
-**Have fun building!** 🚀
-
-
 
 
 # DentaFlow
@@ -71,16 +20,23 @@ A software system that was designed for dental associates.  Dentaflow offers cor
 >**How to use**
 
 
-Simply sign in and the dental associate will have acess to all of the patients information. They will the ability to acess patient history, health history and treatment. 
+Simply sign in and the dental associate will have access to all of the patients information. They will the ability to access patient history, health history and treatment. 
 
 <p> 
-This allows for dental assosiates only acess the information they need and not how much production was generated on the specific days they worked. 
+This allows for dental assosiates only access the information they need and not how much production was generated on the specific days they worked. 
+
+This way they can focus on offering quality dental care to each patient. In the app they can open the patient history and see what teeth have been had treatment and which one they will need to complete for the day. The can also review the patients health history and understand if the patient has any restrictions. 
+
+To start they will go to appointment manager and they can find thier last name. Then they can see what is schedule for them on the days they work. 
+After they have seen the patient they can write there notes and set to complete what treatment was done. 
+
+This applications give them all the tools they need to sucessfully attend a patient. 
 
 
 
 **Data**
 
-The data that was used was created by cluade. I asked it to create it by using 50 patients. 
+The data used was created by cluade. I asked it to create it by using 50 patients. 
 
 **Built with**
 
