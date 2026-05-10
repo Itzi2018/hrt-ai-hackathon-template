@@ -1,0 +1,51 @@
+patient_id,medical_conditions,allergies,current_medications,blood_type,smoking_status,last_updated
+P001,Asthma,Penicillin,Atorvastatin,B-,Non-Smoker,2026-02-10
+P002,Asthma,Sulfa Drugs,Warfarin,B-,Non-Smoker,2025-06-29
+P003,None,Ibuprofen,None,O+,Non-Smoker,2025-07-29
+P004,Hypertension,Ibuprofen,Aspirin Daily,B-,Current Smoker,2025-09-23
+P005,Hypertension,Latex,Atorvastatin,A-,Non-Smoker,2025-07-01
+P006,Asthma,Aspirin,Levothyroxine,B-,Non-Smoker,2026-01-01
+P007,Diabetes Type 2,Ibuprofen,Metformin,B-,Current Smoker,2025-08-28
+P008,Diabetes Type 2,Ibuprofen,Metformin,B-,Non-Smoker,2026-02-24
+P009,Diabetes Type 2,Aspirin,Levothyroxine,A-,Current Smoker,2026-02-14
+P010,Asthma,Codeine,Warfarin,A-,Non-Smoker,2025-07-12
+P011,None,Ibuprofen,None,AB+,Current Smoker,2025-06-03
+P012,Heart Disease,Sulfa Drugs,Lisinopril,AB-,Former Smoker,2026-01-29
+P013,Thyroid Disorder,None,Metformin,A+,Former Smoker,2025-05-21
+P014,None,Codeine,None,O-,Former Smoker,2026-02-08
+P015,Asthma,Sulfa Drugs,Levothyroxine,AB-,Non-Smoker,2025-05-11
+P016,Diabetes Type 1,Codeine,Aspirin Daily,A-,Non-Smoker,2025-11-08
+P017,Diabetes Type 2,Ibuprofen,Metformin,AB-,Non-Smoker,2025-09-09
+P018,None,None,None,AB-,Non-Smoker,2026-03-27
+P019,None,Penicillin,None,A-,Former Smoker,2026-02-10
+P020,Thyroid Disorder,None,Warfarin,B+,Non-Smoker,2025-11-27
+P021,Heart Disease,Ibuprofen,Aspirin Daily,A-,Non-Smoker,2026-01-15
+P022,Hypertension,None,Metformin,B-,Current Smoker,2025-09-27
+P023,Thyroid Disorder,Sulfa Drugs,Warfarin,O+,Current Smoker,2026-02-16
+P024,Diabetes Type 1,Aspirin,Levothyroxine,O+,Current Smoker,2025-11-19
+P025,Asthma,Ibuprofen,Warfarin,B-,Non-Smoker,2025-06-10
+P026,Diabetes Type 1,None,Metformin,A+,Non-Smoker,2026-04-05
+P027,Diabetes Type 2,None,Amlodipine,B-,Non-Smoker,2025-09-04
+P028,Hypertension,Codeine,Metformin,AB+,Non-Smoker,2025-08-17
+P029,Diabetes Type 1,Codeine,Levothyroxine,AB+,Non-Smoker,2025-05-12
+P030,Thyroid Disorder,Latex,Aspirin Daily,O+,Non-Smoker,2025-07-15
+P031,Osteoporosis,Penicillin,Atorvastatin,O+,Non-Smoker,2025-08-08
+P032,Thyroid Disorder,Sulfa Drugs,Levothyroxine,AB+,Non-Smoker,2025-09-28
+P033,Asthma,Latex,Metformin,A-,Non-Smoker,2026-01-29
+P034,Osteoporosis,Codeine,Aspirin Daily,A+,Non-Smoker,2025-06-12
+P035,None,Sulfa Drugs,None,A+,Current Smoker,2026-02-07
+P036,Hypertension,Ibuprofen,Atorvastatin,B+,Non-Smoker,2026-03-10
+P037,Thyroid Disorder,Codeine,Metformin,O+,Non-Smoker,2025-10-07
+P038,Diabetes Type 1,Sulfa Drugs,Amlodipine,A+,Non-Smoker,2025-08-22
+P039,Hypertension,Aspirin,Warfarin,A-,Former Smoker,2026-04-07
+P040,Diabetes Type 2,Aspirin,Metformin,B+,Non-Smoker,2025-05-18
+P041,Asthma,Sulfa Drugs,Aspirin Daily,O+,Non-Smoker,2025-07-06
+P042,Diabetes Type 2,None,Metformin,AB+,Current Smoker,2026-03-04
+P043,Hypertension,Aspirin,Amlodipine,B-,Current Smoker,2025-06-23
+P044,Osteoporosis,Aspirin,Atorvastatin,B-,Non-Smoker,2025-08-04
+P045,Thyroid Disorder,Aspirin,Levothyroxine,B-,Former Smoker,2026-02-19
+P046,Heart Disease,Sulfa Drugs,Aspirin Daily,O+,Non-Smoker,2025-10-18
+P047,Thyroid Disorder,Sulfa Drugs,Lisinopril,O-,Non-Smoker,2025-11-30
+P048,Osteoporosis,Penicillin,Aspirin Daily,B+,Non-Smoker,2026-01-25
+P049,Asthma,Aspirin,Levothyroxine,O+,Non-Smoker,2025-07-31
+P050,Heart Disease,None,Amlodipine,AB-,Current Smoker,2026-03-06

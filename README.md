@@ -47,3 +47,44 @@ CSV files will automatically open as a table when you click them.
 ---
 
 **Have fun building!** 🚀
+
+# DentaFlow
+<p>
+
+
+A software system that was designed for dental associates.  Dentaflow offers core functionality such as scheduling appointments, patient information and recall information.
+
+<p> 
+<strong> This specific application does not display: <strong>
+<p>
+<li> Patient billing information
+<li> Payment history
+<li> Accounts recievable 
+<li> Total production figures
+<p>
+
+<strong style="font-weight: normal;">
+
+>**How to use**
+
+
+Simply sign in and the dental associate will have acess to all of the patients information. They will the ability to acess patient history, health history and treatment. 
+
+<p> 
+This allows for dental assosiates only acess the information they need and not how much production was generated on the specific days they worked. 
+
+
+
+**Data**
+
+The data that was used was created by cluade. I asked it to create it by using 50 patients. 
+
+**Built with**
+
+Streamlight
+
+Cluade
+
+
+
+

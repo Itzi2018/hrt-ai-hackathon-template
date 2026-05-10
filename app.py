@@ -4,7 +4,14 @@ import random
 from datetime import datetime, timedelta
 import os
 
-st.set_page_config(page_title="Smiles By Alex — Patient Monitor", layout="wide", page_icon="🦷")
+st.set_page_config(page_title="Dentaflow — Patient Monitor", layout="wide", page_icon="🦷")
+
+st.markdown("""
+<style>
+    .stApp { background-color: #fffde7; }
+    [data-testid="stSidebar"] { background-color: #fff9c4; }
+</style>
+""", unsafe_allow_html=True)
 
 # ─── Data Generation ──────────────────────────────────────────────────────────
 
@@ -119,91 +126,39 @@ def generate_data():
     return patients_df, appt_df, metrics_df, treatments_df
 
 
-def generate_acquisition_data():
+def generate_health_history(patient_ids):
     os.makedirs("data_ai", exist_ok=True)
-    random.seed(99)
-    today_d = datetime.today()
+    random.seed(77)
+    conditions_pool = ["None","Diabetes Type 2","Hypertension","Heart Disease",
+                       "Asthma","Osteoporosis","Thyroid Disorder","Diabetes Type 1"]
+    allergies_pool  = ["None","Penicillin","Latex","Aspirin","Sulfa Drugs","Codeine","Ibuprofen"]
+    meds_pool       = ["None","Metformin","Lisinopril","Atorvastatin","Warfarin",
+                       "Levothyroxine","Amlodipine","Aspirin Daily"]
+    blood_types     = ["A+","A-","B+","B-","O+","O-","AB+","AB-"]
+    smoking         = ["Non-Smoker","Non-Smoker","Non-Smoker","Former Smoker","Current Smoker"]
 
-    segments = [
-        {"segment": "Vietnamese Families",       "population": 14000, "pct_insured": 58,  "avg_household_income": 82000,  "primary_language": "Vietnamese/English", "annual_dental_visit_rate": 45, "best_channel": "Vietnamese Community Media"},
-        {"segment": "Korean Community",           "population": 4500,  "pct_insured": 72,  "avg_household_income": 105000, "primary_language": "Korean/English",     "annual_dental_visit_rate": 55, "best_channel": "Korean Language Outreach"},
-        {"segment": "Caucasian Families",       "population": 19000, "pct_insured": 75,  "avg_household_income": 110000, "primary_language": "English",            "annual_dental_visit_rate": 68, "best_channel": "Nextdoor / Google Ads"},
-        {"segment": "Hispanic/Latino Families",   "population": 8500,  "pct_insured": 45,  "avg_household_income": 65000,  "primary_language": "Spanish/English",    "annual_dental_visit_rate": 38, "best_channel": "Facebook / Spanish Outreach"},
-        {"segment": "Seniors 65+",                "population": 11000, "pct_insured": 85,  "avg_household_income": 55000,  "primary_language": "English",            "annual_dental_visit_rate": 72, "best_channel": "Senior Center Outreach"},
-        {"segment": "Young Adults 25-34",         "population": 9500,  "pct_insured": 52,  "avg_household_income": 75000,  "primary_language": "English",            "annual_dental_visit_rate": 42, "best_channel": "Instagram / Yelp"},
-        {"segment": "Families with Young Children","population": 7500, "pct_insured": 65,  "avg_household_income": 95000,  "primary_language": "English",            "annual_dental_visit_rate": 60, "best_channel": "School Partnerships (FVUSD)"},
-    ]
-    for s in segments:
-        s["est_unserved_residents"] = round(s["population"] * (1 - s["annual_dental_visit_rate"] / 100))
-        s["opportunity_score"]      = round(s["est_unserved_residents"] * (s["pct_insured"] / 100))
-    fv_demo_df = pd.DataFrame(segments)
-    fv_demo_df.to_csv("data_ai/fv_demographics.csv", index=False)
-
-    channels = [
-        {"channel": "Google Business Optimization",       "monthly_cost": 200, "monthly_reach": 3500, "est_new_patients_monthly": 8, "best_segment": "All",                      "roi_score": 9,  "notes": "High-intent searches; free with setup cost"},
-        {"channel": "Nextdoor Advertising",               "monthly_cost": 300, "monthly_reach": 2800, "est_new_patients_monthly": 6, "best_segment": "Caucasian Families",     "roi_score": 8,  "notes": "Hyper-local; neighbors trust recommendations"},
-        {"channel": "Facebook/Instagram Ads",             "monthly_cost": 500, "monthly_reach": 5000, "est_new_patients_monthly": 9, "best_segment": "Hispanic / Young Adults",  "roi_score": 8,  "notes": "Targeted by zip code; multilingual options"},
-        {"channel": "Yelp Premium",                       "monthly_cost": 400, "monthly_reach": 2200, "est_new_patients_monthly": 5, "best_segment": "Young Adults / All",       "roi_score": 7,  "notes": "High conversion for comparison shoppers"},
-        {"channel": "Vietnamese Community Media",         "monthly_cost": 350, "monthly_reach": 4500, "est_new_patients_monthly": 7, "best_segment": "Vietnamese Families",      "roi_score": 9,  "notes": "Little Saigon radio, newspapers, Zalo/WeChat"},
-        {"channel": "School Partnerships (FVUSD)",        "monthly_cost": 150, "monthly_reach": 1800, "est_new_patients_monthly": 4, "best_segment": "Families w/ Children",     "roi_score": 8,  "notes": "Back-to-school dental checkup campaigns"},
-        {"channel": "Senior Center Outreach",             "monthly_cost": 100, "monthly_reach": 800,  "est_new_patients_monthly": 3, "best_segment": "Seniors 65+",              "roi_score": 9,  "notes": "Low cost; high trust; Medicare/Medi-Cal referrals"},
-        {"channel": "Referral Program",                   "monthly_cost": 250, "monthly_reach": 0,    "est_new_patients_monthly": 5, "best_segment": "All",                      "roi_score": 10, "notes": "Incentivize current patients — highest conversion"},
-        {"channel": "Community Events (Mile Square Park)","monthly_cost": 400, "monthly_reach": 3000, "est_new_patients_monthly": 6, "best_segment": "Vietnamese/Hispanic Families","roi_score": 7,"notes": "Health fair booths; free screenings build trust"},
-        {"channel": "Korean Language Outreach",           "monthly_cost": 200, "monthly_reach": 1500, "est_new_patients_monthly": 4, "best_segment": "Korean Community",         "roi_score": 9,  "notes": "KakaoTalk groups, Korean church bulletin boards"},
-    ]
-    for c in channels:
-        c["cost_per_patient"]         = round(c["monthly_cost"] / c["est_new_patients_monthly"], 2)
-        c["monthly_revenue_potential"] = c["est_new_patients_monthly"] * 350
-    mktg_df = pd.DataFrame(channels)
-    mktg_df.to_csv("data_ai/marketing_channels.csv", index=False)
-
-    lead_names = [
-        ("Linh","Nguyen"),("David","Kim"),("Maria","Flores"),("James","Anderson"),
-        ("Mei","Chen"),("Rosa","Martinez"),("Kevin","Park"),("Jennifer","Tran"),
-        ("Michael","Lopez"),("Susan","Lee"),("Carlos","Ramirez"),("Emily","Pham"),
-        ("Robert","Johnson"),("Anh","Le"),("Jessica","Wong"),("Thomas","Garcia"),
-        ("Yuna","Choi"),("Patricia","Hernandez"),("Daniel","Nguyen"),("Sarah","Smith"),
-    ]
-    sources   = ["Google Search","Nextdoor","Facebook Ad","Vietnamese Media","Patient Referral",
-                 "Yelp","Community Event","School Flyer","Walk-In","Korean Church"]
-    seg_names = [s["segment"] for s in segments]
-    statuses  = ["New Lead","Contacted","Appointment Set","Converted","Not Interested"]
-    leads = []
-    for i, (fn, ln) in enumerate(lead_names, 1):
-        src = random.choice(sources)
-        if "Vietnamese" in src:
-            seg = "Vietnamese Families"
-        elif "Korean" in src:
-            seg = "Korean Community"
-        elif "School" in src:
-            seg = "Families with Young Children"
-        else:
-            seg = random.choice(seg_names)
-        leads.append({
-            "lead_id":    f"L{i:03d}",
-            "first_name": fn, "last_name": ln,
-            "phone":      f"({random.randint(700,999)}) {random.randint(200,999)}-{random.randint(1000,9999)}",
-            "email":      f"{fn.lower()}.{ln.lower()}{random.randint(1,99)}@email.com",
-            "source":     src, "segment": seg,
-            "status":     random.choices(statuses, [0.25, 0.30, 0.20, 0.15, 0.10])[0],
-            "date_added": (today_d - timedelta(days=random.randint(1, 90))).strftime("%Y-%m-%d"),
-            "notes":      random.choice(["Interested in whitening","Family looking for dentist",
-                                          "Needs cleaning","Moving to FV soon","Saw us at community event",
-                                          "Referred by existing patient","","",""]),
+    records = []
+    for pid in patient_ids:
+        cond = random.choice(conditions_pool)
+        med  = "None" if cond == "None" else random.choice([m for m in meds_pool if m != "None"])
+        records.append({
+            "patient_id":          pid,
+            "medical_conditions":  cond,
+            "allergies":           random.choice(allergies_pool),
+            "current_medications": med,
+            "blood_type":          random.choice(blood_types),
+            "smoking_status":      random.choice(smoking),
+            "last_updated":        (datetime.today() - timedelta(days=random.randint(30,365))).strftime("%Y-%m-%d"),
         })
-    leads_df = pd.DataFrame(leads)
-    leads_df.to_csv("data_ai/leads.csv", index=False)
-    return fv_demo_df, mktg_df, leads_df
+    hh_df = pd.DataFrame(records)
+    hh_df.to_csv("data_ai/health_history.csv", index=False)
+    return hh_df
 
 
-def load_acquisition_data():
-    if not os.path.exists("data_ai/fv_demographics.csv"):
-        return generate_acquisition_data()
-    return (
-        pd.read_csv("data_ai/fv_demographics.csv"),
-        pd.read_csv("data_ai/marketing_channels.csv"),
-        pd.read_csv("data_ai/leads.csv"),
-    )
+def load_health_history(patient_ids):
+    if not os.path.exists("data_ai/health_history.csv"):
+        return generate_health_history(patient_ids)
+    return pd.read_csv("data_ai/health_history.csv")
 
 
 def load_data():
@@ -231,27 +186,22 @@ appt_df        = st.session_state.appt_df
 metrics_df     = st.session_state.metrics_df
 treatments_df  = st.session_state.treatments_df
 
-if "fv_demo_df" not in st.session_state:
-    fd, mkt, ld = load_acquisition_data()
-    st.session_state.fv_demo_df = fd
-    st.session_state.mktg_df    = mkt
-    st.session_state.leads_df   = ld
+if "health_history_df" not in st.session_state:
+    st.session_state.health_history_df = load_health_history(patients_df["patient_id"].tolist())
 
-fv_demo_df = st.session_state.fv_demo_df
-mktg_df    = st.session_state.mktg_df
-leads_df   = st.session_state.leads_df
+health_history_df = st.session_state.health_history_df
 today_str  = datetime.today().strftime("%Y-%m-%d")
 
 # ─── Sidebar Navigation ───────────────────────────────────────────────────────
 
 st.sidebar.image("https://img.icons8.com/emoji/96/tooth-emoji.png", width=64)
-st.sidebar.title("🦷 Smiles By Alex")
+st.sidebar.title("🦷 Dentaflow")
 st.sidebar.caption("Patient Monitoring System")
 st.sidebar.markdown("---")
 
 page = st.sidebar.radio(
     "Navigate",
-    ["📊 Overview", "👥 Patients", "📅 Appointments", "🚨 Alerts", "🏘️ Grow Practice", "➕ Add Data"],
+    ["📊 Overview", "👥 Patients", "📅 Appointments", "🚨 Alerts", "🏥 Health History", "➕ Add Data"],
     label_visibility="collapsed",
 )
 
@@ -316,23 +266,9 @@ if page == "📊 Overview":
 
     st.markdown("---")
 
-    col5, col6 = st.columns(2)
-    with col5:
-        st.subheader("Patients by Insurance Provider")
-        ins_counts = patients_df["insurance"].value_counts().rename_axis("Insurance").reset_index(name="Patients")
-        st.bar_chart(ins_counts.set_index("Insurance"), height=260, use_container_width=True)
-    with col6:
-        st.subheader("Revenue Summary")
-        total_billed = treatments_df["cost_usd"].sum()
-        total_covered = treatments_df["insurance_covered_usd"].sum()
-        total_owed = treatments_df["patient_owes_usd"].sum()
-        r1, r2, r3 = st.columns(3)
-        r1.metric("Total Billed", f"${total_billed:,.0f}")
-        r2.metric("Insurance Paid", f"${total_covered:,.0f}")
-        r3.metric("Patient Balance", f"${total_owed:,.0f}")
-        rev_df = pd.DataFrame({"Category": ["Insurance Covered","Patient Owes"],
-                               "Amount": [total_covered, total_owed]})
-        st.bar_chart(rev_df.set_index("Category"), height=170, use_container_width=True)
+    st.subheader("Patients by Insurance Provider")
+    ins_counts = patients_df["insurance"].value_counts().rename_axis("Insurance").reset_index(name="Patients")
+    st.bar_chart(ins_counts.set_index("Insurance"), height=260, use_container_width=True)
 
 
 # ══════════════════════════════════════════════════════════════════════════════
@@ -418,11 +354,8 @@ elif page == "👥 Patients":
     st.markdown("**Treatment History**")
     p_treats = treatments_df[treatments_df["patient_id"] == patient["patient_id"]].sort_values("date", ascending=False)
     if not p_treats.empty:
-        st.dataframe(p_treats[["date","procedure","tooth_number","cost_usd",
-                                "insurance_covered_usd","patient_owes_usd"]].rename(
-            columns={"date":"Date","procedure":"Procedure","tooth_number":"Tooth #",
-                     "cost_usd":"Cost ($)","insurance_covered_usd":"Covered ($)",
-                     "patient_owes_usd":"Patient Owes ($)"}),
+        st.dataframe(p_treats[["date","procedure","tooth_number"]].rename(
+            columns={"date":"Date","procedure":"Procedure","tooth_number":"Tooth #"}),
             use_container_width=True, height=200)
     else:
         st.info("No treatments on record.")
@@ -697,179 +630,138 @@ elif page == "➕ Add Data":
 
 
 # ══════════════════════════════════════════════════════════════════════════════
-# PAGE: GROW PRACTICE
+# PAGE: HEALTH HISTORY
 # ══════════════════════════════════════════════════════════════════════════════
 
-elif page == "🏘️ Grow Practice":
-    st.title("🏘️ Grow Your Practice")
-    st.markdown("Attract new patients by targeting Fountain Valley's key community segments with the right outreach strategy.")
+elif page == "🏥 Health History":
+    st.title("🏥 Patient Health History")
+    st.markdown("Medical background and dental health trends for each patient.")
     st.markdown("---")
 
-    total_leads = len(leads_df)
-    converted   = len(leads_df[leads_df["status"] == "Converted"])
-    in_pipeline = len(leads_df[leads_df["status"].isin(["New Lead","Contacted","Appointment Set"])])
-    conv_rate   = round(converted / total_leads * 100, 1) if total_leads > 0 else 0
-    best_ch     = mktg_df.sort_values("roi_score", ascending=False).iloc[0]["channel"]
-
-    gk1, gk2, gk3, gk4 = st.columns(4)
-    gk1.metric("Active Leads", total_leads)
-    gk2.metric("Converted to Patients", converted, delta=f"{conv_rate}% conversion")
-    gk3.metric("In Pipeline", in_pipeline)
-    gk4.metric("Highest ROI Channel", best_ch[:22] + "…" if len(best_ch) > 22 else best_ch)
+    selected_name = st.selectbox("Select a Patient", patients_df["name"].sort_values().tolist())
+    patient  = patients_df[patients_df["name"] == selected_name].iloc[0]
+    pid      = patient["patient_id"]
+    hh       = health_history_df[health_history_df["patient_id"] == pid]
 
     st.markdown("---")
 
-    gt1, gt2, gt3, gt4 = st.tabs(["📊 FV Demographics", "🎯 Target Segments", "📣 Marketing Channels", "👤 Lead Tracker"])
+    # ── Medical Background ────────────────────────────────────────────────────
+    st.subheader("Medical Background")
+    hh1, hh2, hh3, hh4, hh5 = st.columns(5)
+    if not hh.empty:
+        row = hh.iloc[0]
+        hh1.metric("Medical Conditions", row["medical_conditions"])
+        hh2.metric("Allergies",          row["allergies"])
+        hh3.metric("Medications",        row["current_medications"])
+        hh4.metric("Blood Type",         row["blood_type"])
+        hh5.metric("Smoking Status",     row["smoking_status"])
 
-    # ── TAB 1: Demographics ───────────────────────────────────────────────────
-    with gt1:
-        st.subheader("Fountain Valley, CA — Community Snapshot")
-        st.caption("Population ≈ 57,000 · Median Age 41 · Median HH Income ~$93,000 · ~42% Asian, ~35% White, ~15% Hispanic")
+        if row["medical_conditions"] not in ["None", ""]:
+            st.warning(f"⚠️ Note: Patient has **{row['medical_conditions']}** — may affect treatment planning and medication choices.")
+        if row["allergies"] not in ["None", ""]:
+            st.error(f"🚨 Allergy Alert: **{row['allergies']}** — verify before prescribing.")
+    else:
+        st.info("No health history on file for this patient.")
 
-        da1, da2 = st.columns(2)
-        with da1:
-            st.markdown("**Population by Community Segment**")
-            st.bar_chart(fv_demo_df[["segment","population"]].set_index("segment"), height=300, use_container_width=True)
-        with da2:
-            st.markdown("**Estimated Residents Without a Regular Dentist**")
-            st.bar_chart(fv_demo_df[["segment","est_unserved_residents"]].set_index("segment"), height=300, use_container_width=True)
+    st.markdown("---")
 
-        st.markdown("---")
-        st.subheader("Annual Dental Visit Rate by Segment (%)")
-        st.caption("Lower % = more residents not seeing a dentist regularly = larger growth opportunity for your practice.")
-        st.bar_chart(fv_demo_df[["segment","annual_dental_visit_rate"]].set_index("segment"), height=250, use_container_width=True)
+    # ── Dental Health Trends ──────────────────────────────────────────────────
+    st.subheader("Dental Health Trends Over Time")
+    pt_metrics = (metrics_df[metrics_df["patient_id"] == pid]
+                  .copy()
+                  .sort_values("date"))
 
-        st.markdown("---")
-        disp = fv_demo_df[["segment","population","pct_insured","avg_household_income",
-                             "annual_dental_visit_rate","est_unserved_residents","best_channel"]].copy()
-        disp.columns = ["Segment","Population","% Insured","Avg HH Income ($)","Dental Visit Rate (%)","Est. Unserved","Best Outreach Channel"]
-        st.dataframe(disp, use_container_width=True, hide_index=True)
+    if len(pt_metrics) < 2:
+        st.info("Not enough visit data to show trends — need at least 2 completed visits.")
+    else:
+        pt_metrics["date"] = pd.to_datetime(pt_metrics["date"]).dt.strftime("%Y-%m-%d")
+        pt_metrics = pt_metrics.set_index("date")
 
-    # ── TAB 2: Target Segments ────────────────────────────────────────────────
-    with gt2:
-        st.subheader("Patient Acquisition Opportunity Score")
-        st.caption("Score = Est. Unserved Residents × (% Insured ÷ 100). Higher = more reachable, insured prospects in that community.")
+        tc1, tc2, tc3 = st.columns(3)
+        with tc1:
+            st.markdown("**Plaque Score** (lower is better)")
+            st.line_chart(pt_metrics[["plaque_score"]], height=200, use_container_width=True)
+        with tc2:
+            st.markdown("**Oral Hygiene Score** (higher is better)")
+            st.line_chart(pt_metrics[["oral_hygiene_score"]], height=200, use_container_width=True)
+        with tc3:
+            st.markdown("**Cavity Count**")
+            st.line_chart(pt_metrics[["cavity_count"]], height=200, use_container_width=True)
 
-        top_segs = fv_demo_df.sort_values("opportunity_score", ascending=False).reset_index(drop=True)
-        st.bar_chart(top_segs[["segment","opportunity_score"]].set_index("segment"), height=280, use_container_width=True)
+        tc4, tc5 = st.columns(2)
+        with tc4:
+            st.markdown("**Gum Bleeding Sites** (lower is better)")
+            st.line_chart(pt_metrics[["gum_bleeding_sites"]], height=200, use_container_width=True)
+        with tc5:
+            st.markdown("**Pocket Depth (mm)** (lower is better)")
+            st.line_chart(pt_metrics[["pocket_depth_avg_mm"]], height=200, use_container_width=True)
 
-        st.markdown("---")
-        st.subheader("Recommendations by Segment")
-        for idx, row in top_segs.iterrows():
-            icon = "🥇" if idx == 0 else ("🥈" if idx == 1 else ("🥉" if idx == 2 else "📌"))
-            with st.expander(f"{icon} {row['segment']}  —  Opportunity Score: {int(row['opportunity_score']):,}"):
-                sc1, sc2, sc3 = st.columns(3)
-                sc1.metric("Est. Unserved Residents", f"{int(row['est_unserved_residents']):,}")
-                sc2.metric("% with Dental Insurance", f"{int(row['pct_insured'])}%")
-                sc3.metric("Avg Household Income",    f"${int(row['avg_household_income']):,}")
-                st.info(f"**Recommended Channel:** {row['best_channel']}  ·  **Primary Language:** {row['primary_language']}")
+    st.markdown("---")
 
-    # ── TAB 3: Marketing Channels ─────────────────────────────────────────────
-    with gt3:
-        st.subheader("Marketing Channel Comparison — Fountain Valley")
-        budget = st.slider("Monthly Marketing Budget ($)", min_value=100, max_value=3000, value=1500, step=50)
+    # ── Visit Notes Timeline ──────────────────────────────────────────────────
+    st.subheader("Visit Notes Timeline")
+    pt_appts = (appt_df[appt_df["patient_id"] == pid]
+                .copy()
+                .sort_values("date", ascending=False))
+    pt_appts = pt_appts[pt_appts["status"] == "Completed"]
 
-        mktg_sorted = mktg_df.sort_values("roi_score", ascending=False).copy()
-        affordable  = mktg_sorted[mktg_sorted["monthly_cost"] <= budget]
-
-        if not affordable.empty:
-            bm1, bm2, bm3 = st.columns(3)
-            bm1.metric("Channels Within Budget",  len(affordable))
-            bm2.metric("Est. New Patients/Month", int(affordable["est_new_patients_monthly"].sum()),
-                       delta=f"${int(affordable['monthly_cost'].sum()):,}/mo spent")
-            bm3.metric("Est. Revenue Potential",  f"${int(affordable['monthly_revenue_potential'].sum()):,}")
-
-        st.markdown("---")
-        mc1, mc2 = st.columns(2)
-        with mc1:
-            st.markdown("**New Patients per Month (by Channel)**")
-            st.bar_chart(mktg_sorted[["channel","est_new_patients_monthly"]].set_index("channel"), height=300, use_container_width=True)
-        with mc2:
-            st.markdown("**ROI Score (1–10, higher is better)**")
-            st.bar_chart(mktg_sorted[["channel","roi_score"]].set_index("channel"), height=300, use_container_width=True)
-
-        st.markdown("---")
-        disp_mktg = mktg_sorted[["channel","monthly_cost","est_new_patients_monthly",
-                                   "cost_per_patient","roi_score","best_segment","notes"]].copy()
-        disp_mktg.columns = ["Channel","Monthly Cost ($)","New Patients/Mo",
-                               "Cost per Patient ($)","ROI Score","Best For","Notes"]
-
-        def color_roi(row):
-            if row["ROI Score"] >= 9:
-                return ["background-color: #e0ffe8"] * len(row)
-            elif row["ROI Score"] == 8:
-                return ["background-color: #fff9e0"] * len(row)
-            return [""] * len(row)
-
-        st.dataframe(disp_mktg.style.apply(color_roi, axis=1), use_container_width=True, hide_index=True)
-
-    # ── TAB 4: Lead Tracker ───────────────────────────────────────────────────
-    with gt4:
-        st.subheader("Prospective Patient Lead Tracker")
-
-        funnel  = ["New Lead","Contacted","Appointment Set","Converted","Not Interested"]
-        scounts = leads_df["status"].value_counts()
-        lk1, lk2, lk3, lk4, lk5 = st.columns(5)
-        for col, s in zip([lk1, lk2, lk3, lk4, lk5], funnel):
-            col.metric(s, int(scounts.get(s, 0)))
-
-        st.markdown("---")
-
-        lfc1, lfc2 = st.columns(2)
-        lead_st_f  = lfc1.selectbox("Filter by Status", ["All"] + funnel, key="lt_status")
-        lead_src_f = lfc2.selectbox("Filter by Source", ["All"] + sorted(leads_df["source"].unique().tolist()), key="lt_src")
-
-        flt_leads = leads_df.copy()
-        if lead_st_f != "All":
-            flt_leads = flt_leads[flt_leads["status"] == lead_st_f]
-        if lead_src_f != "All":
-            flt_leads = flt_leads[flt_leads["source"] == lead_src_f]
-
-        disp_leads = flt_leads[["lead_id","first_name","last_name","phone","email",
-                                  "source","segment","status","date_added","notes"]].copy()
-        disp_leads.columns = ["ID","First","Last","Phone","Email","Source","Segment","Status","Date Added","Notes"]
-
-        def color_lead(row):
-            c = {"Converted":"#e0ffe8","Appointment Set":"#e0f0ff",
-                 "Contacted":"#fff9e0","New Lead":"#f5f5f5","Not Interested":"#ffe0e0"}.get(row["Status"],"")
-            return [f"background-color: {c}" if c else "" for _ in row]
-
-        st.dataframe(disp_leads.style.apply(color_lead, axis=1),
-                     use_container_width=True, height=300, hide_index=True)
-
-        st.markdown("---")
-        st.subheader("Add New Lead")
-        with st.form("add_lead_form", clear_on_submit=True):
-            fl1, fl2, fl3 = st.columns(3)
-            l_first  = fl1.text_input("First Name *")
-            l_last   = fl2.text_input("Last Name *")
-            l_phone  = fl3.text_input("Phone", placeholder="(714) 555-1234")
-            fl4, fl5, fl6 = st.columns(3)
-            l_email  = fl4.text_input("Email")
-            l_source = fl5.selectbox("How did they find us?",
-                ["Google Search","Nextdoor","Facebook Ad","Vietnamese Media","Patient Referral",
-                 "Yelp","Community Event","School Flyer","Walk-In","Korean Church","Other"])
-            l_seg    = fl6.selectbox("Community Segment", fv_demo_df["segment"].tolist())
-            fl7, fl8 = st.columns([1, 2])
-            l_status = fl7.selectbox("Status", ["New Lead","Contacted","Appointment Set"])
-            l_notes  = fl8.text_input("Notes", placeholder="Optional notes about this lead")
-
-            if st.form_submit_button("➕ Add Lead", type="primary"):
-                if not l_first.strip() or not l_last.strip():
-                    st.error("First and last name are required.")
+    if pt_appts.empty:
+        st.info("No completed visits on record.")
+    else:
+        for _, appt in pt_appts.iterrows():
+            with st.expander(f"📅 {appt['date']}  —  {appt['type']}  ({appt['dentist']})"):
+                if appt["notes"]:
+                    st.write(appt["notes"])
                 else:
-                    new_lid  = len(st.session_state.leads_df) + 1
-                    new_lead = pd.DataFrame([{
-                        "lead_id":    f"L{new_lid:03d}",
-                        "first_name": l_first.strip(), "last_name": l_last.strip(),
-                        "phone":      l_phone, "email": l_email,
-                        "source":     l_source, "segment": l_seg,
-                        "status":     l_status,
-                        "date_added": datetime.today().strftime("%Y-%m-%d"),
-                        "notes":      l_notes.strip(),
-                    }])
-                    updated = pd.concat([st.session_state.leads_df, new_lead], ignore_index=True)
-                    updated.to_csv("data_ai/leads.csv", index=False)
-                    st.session_state.leads_df = updated
-                    st.success(f"Lead **{l_first} {l_last}** added successfully!")
-                    st.rerun()
+                    st.caption("No notes recorded for this visit.")
+
+    st.markdown("---")
+
+    # ── Edit Health Record ────────────────────────────────────────────────────
+    st.subheader("Update Health Record")
+    existing = hh.iloc[0] if not hh.empty else None
+    with st.form("edit_health_form", clear_on_submit=False):
+        ef1, ef2, ef3 = st.columns(3)
+        conditions_list = ["None","Diabetes Type 2","Hypertension","Heart Disease",
+                           "Asthma","Osteoporosis","Thyroid Disorder","Diabetes Type 1"]
+        allergies_list  = ["None","Penicillin","Latex","Aspirin","Sulfa Drugs","Codeine","Ibuprofen"]
+        meds_list       = ["None","Metformin","Lisinopril","Atorvastatin","Warfarin",
+                           "Levothyroxine","Amlodipine","Aspirin Daily"]
+        smoking_list    = ["Non-Smoker","Former Smoker","Current Smoker"]
+        blood_list      = ["A+","A-","B+","B-","O+","O-","AB+","AB-"]
+
+        def idx(lst, val):
+            return lst.index(val) if val in lst else 0
+
+        e_cond    = ef1.selectbox("Medical Conditions", conditions_list,
+                                   index=idx(conditions_list, existing["medical_conditions"]) if existing is not None else 0)
+        e_allergy = ef2.selectbox("Allergies", allergies_list,
+                                   index=idx(allergies_list, existing["allergies"]) if existing is not None else 0)
+        e_med     = ef3.selectbox("Current Medications", meds_list,
+                                   index=idx(meds_list, existing["current_medications"]) if existing is not None else 0)
+        ef4, ef5 = st.columns(2)
+        e_blood   = ef4.selectbox("Blood Type", blood_list,
+                                   index=idx(blood_list, existing["blood_type"]) if existing is not None else 0)
+        e_smoke   = ef5.selectbox("Smoking Status", smoking_list,
+                                   index=idx(smoking_list, existing["smoking_status"]) if existing is not None else 0)
+
+        if st.form_submit_button("💾 Save Health Record", type="primary"):
+            updated_hh = health_history_df.copy()
+            new_row = {
+                "patient_id":          pid,
+                "medical_conditions":  e_cond,
+                "allergies":           e_allergy,
+                "current_medications": e_med,
+                "blood_type":          e_blood,
+                "smoking_status":      e_smoke,
+                "last_updated":        datetime.today().strftime("%Y-%m-%d"),
+            }
+            if pid in updated_hh["patient_id"].values:
+                updated_hh.loc[updated_hh["patient_id"] == pid, list(new_row.keys())] = list(new_row.values())
+            else:
+                updated_hh = pd.concat([updated_hh, pd.DataFrame([new_row])], ignore_index=True)
+            updated_hh.to_csv("data_ai/health_history.csv", index=False)
+            st.session_state.health_history_df = updated_hh
+            st.success(f"✅ Health record for **{selected_name}** updated!")
+            st.rerun()
+
